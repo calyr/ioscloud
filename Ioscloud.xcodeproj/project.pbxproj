@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CFCB34601D2AB26A00C0E4EC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFCB345F1D2AB26A00C0E4EC /* Default-568h@2x.png */; };
 		CFD248FB1D26AC18004D25E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD248FA1D26AC18004D25E4 /* AppDelegate.swift */; };
 		CFD248FD1D26AC18004D25E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD248FC1D26AC18004D25E4 /* ViewController.swift */; };
 		CFD249001D26AC18004D25E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFD248FE1D26AC18004D25E4 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CFCB345F1D2AB26A00C0E4EC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		CFD248F71D26AC18004D25E4 /* Ioscloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ioscloud.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFD248FA1D26AC18004D25E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFD248FC1D26AC18004D25E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +40,7 @@
 		CFD248EE1D26AC18004D25E4 = {
 			isa = PBXGroup;
 			children = (
+				CFCB345F1D2AB26A00C0E4EC /* Default-568h@2x.png */,
 				CFD248F91D26AC18004D25E4 /* Ioscloud */,
 				CFD248F81D26AC18004D25E4 /* Products */,
 			);
@@ -123,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFD249051D26AC18004D25E4 /* LaunchScreen.storyboard in Resources */,
+				CFCB34601D2AB26A00C0E4EC /* Default-568h@2x.png in Resources */,
 				CFD249021D26AC18004D25E4 /* Assets.xcassets in Resources */,
 				CFD249001D26AC18004D25E4 /* Main.storyboard in Resources */,
 			);
@@ -288,6 +292,7 @@
 				CFD2490B1D26AC18004D25E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
