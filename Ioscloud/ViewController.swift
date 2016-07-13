@@ -19,6 +19,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         txtIsbn.delegate = self
+        //txtIsbn.keyboardType = UIKeyboardType.Default
+        //txtIsbn.returnKeyType = .Search
         // Do any additional setup after loading the view, typically from a nib.
     }
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -46,6 +48,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
             let json  = try NSJSONSerialization.JSONObjectWithData(datos!, options: NSJSONReadingOptions.MutableLeaves)
             
             let dataall = json as! NSDictionary
+            print(dataall)
+            if dataall.count == 0 {
+                let alert = UIAlertController(title: "PARAMETROS DE BUSQUEDA INVALIDO", message: "Verificar el codigo ISBN.", preferredStyle: .Alert)
+                let popup = UIAlertAction(title: "OK", style: .Default, handler: nil)
+                alert.addAction(popup)
+                self.presentViewController(alert, animated: true, completion: nil)
+                return
+            }
             let titulo = dataall["ISBN:"+isbn]!["title"] as! NSString as String
             let dataautores = dataall["ISBN:"+isbn]!["authors"] as! NSArray
             let coverpages = dataall["ISBN:"+isbn]!["cover"] as! NSDictionary
@@ -76,6 +86,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
             coverpage.image = UIImage(data: dataimage!)
             
         }catch _ {
+            
+            let alert = UIAlertController(title: "NO INTERNET ?", message: "Check Internet connection / Flight mode please.", preferredStyle: .Alert)
+            let popup = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            alert.addAction(popup)
+            self.presentViewController(alert, animated: true, completion: nil)
         }
     }
 
